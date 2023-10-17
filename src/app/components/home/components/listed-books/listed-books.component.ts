@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, map, switchMap } from 'rxjs';
 import { BookService } from 'src/app/services/book/book.service';
 import { GoogleBooksService } from 'src/app/services/google-books/google-books.service';
@@ -13,12 +14,19 @@ export class ListedBooksComponent implements OnInit {
 
   allBooks?: Observable<Book[]>;
 
-  constructor(private bookService: BookService,
-    private googleBooksService:GoogleBooksService) { }
+  constructor(
+    private bookService: BookService,
+    private googleBooksService:GoogleBooksService,
+    private router:Router) { }
 
   //carrega os livros ao inicializar a pagina
   ngOnInit(): void {
     //this.loadBooks();
+    this.loadBooksWithoutImage();
+  }
+
+  loadBooksWithoutImage(){
+    this.allBooks = this.bookService.getAll();
   }
 
   //Carrega os livros no array 'allBooks' e adiciona a image dado o titulo e buscando no google books api via service.
@@ -34,6 +42,10 @@ export class ListedBooksComponent implements OnInit {
         return Promise.all(booksWithImagePromises);
       })
     );
+  }
+
+  goToBookPage(bookId: number){
+    this.router.navigate(['/book', bookId]);
   }
 
 

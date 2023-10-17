@@ -1,0 +1,5 @@
+<div class="star-rating">
+  <ng-container *ngFor="let star of stars; let i = index">
+    <mat-icon [ngClass]="{'filled': i < rating}" (click)="rate(i + 1)">star</mat-icon>
+  </ng-container>
+</div>

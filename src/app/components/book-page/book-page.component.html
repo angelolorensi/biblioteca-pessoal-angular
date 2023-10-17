@@ -1,0 +1,19 @@
+<app-header></app-header>
+<body>
+  <div>
+    <mat-card mat-elevation="8">
+      <img *ngIf="book?.imageUrl" mat-card-image src="{{book?.imageUrl}}" >
+      <img *ngIf="!book?.imageUrl" mat-card-image src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg" >
+      <div class="card-info">
+        <div class="card-info-title">
+          <h1>{{book?.titulo}}</h1>
+          <h2>{{book?.autor}}</h2>
+        </div>
+        <app-star-rating [rating]="book!.classificacao"></app-star-rating>
+        <div class="card-info-review">
+          <p>{{book?.resenha}}</p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</body>

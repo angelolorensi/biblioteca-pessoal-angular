@@ -15,6 +15,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import { BookPageComponent } from './components/book-page/book-page.component';
+import { StarRatingComponent } from './shared/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import {MatButtonModule} from '@angular/material/button';
     FooterComponent,
     SideLogoComponent,
     ListedBooksComponent,
+    BookPageComponent,
+    StarRatingComponent,
   ],
   imports: [
     BrowserModule,

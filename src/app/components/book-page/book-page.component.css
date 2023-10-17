@@ -1,0 +1,44 @@
+body{
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+mat-card{
+  display: flex;
+}
+
+.card-info{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-left: 3em;
+}
+
+.card-info-title{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-info-title h1{
+  font-size: 60px;
+  font-family: "Gabarito";
+}
+
+.card-info-title h2{
+  font-size: 30px;
+  color: rgb(131, 131, 131);
+  font-family: "Gabarito";
+}
+
+.card-info-review p{
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Roboto";
+}
+
+img{
+  height: 100%;
+  width: 500px;
+}
