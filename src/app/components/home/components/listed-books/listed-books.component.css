@@ -5,6 +5,15 @@ ul{
   gap: 2em;
 }
 
+ul li div{
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+ul li div:hover{
+  transform: scale(1.02);
+}
+
 mat-card{
   width: 270px;
   height: 100%;
@@ -30,7 +39,7 @@ mat-card-content{
 mat-card-content h4{
   font-size: 20px;
   font-weight: 500;
-  
+
 }
 
 mat-card-image{
@@ -41,6 +50,10 @@ mat-card-image{
 
 img{
   max-height: 300px;
+}
+
+img:hover{
+  opacity: 0.8;
 }
 
 .loading-spinner{

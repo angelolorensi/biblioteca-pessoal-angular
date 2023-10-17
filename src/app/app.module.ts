@@ -17,6 +17,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { BookPageComponent } from './components/book-page/book-page.component';
 import { StarRatingComponent } from './shared/star-rating/star-rating.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +34,7 @@ import { StarRatingComponent } from './shared/star-rating/star-rating.component'
     ListedBooksComponent,
     BookPageComponent,
     StarRatingComponent,
+    ConfirmationDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +46,12 @@ import { StarRatingComponent } from './shared/star-rating/star-rating.component'
     MatProgressSpinnerModule,
     MatToolbarModule,
     MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

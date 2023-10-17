@@ -11,6 +11,11 @@ mat-toolbar h1{
   font-size: 30px;
   font-family: "Gabarito";
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+mat-toolbar h1:hover{
+  opacity: 0.8;
 }
 
 mat-toolbar button{

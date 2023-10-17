@@ -15,6 +15,24 @@ mat-card{
   margin-left: 3em;
 }
 
+.card-info-btns{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 10px;
+  gap: 8px;
+}
+
+mat-icon{
+  font-size: 30px;
+  cursor: pointer;
+}
+
+mat-icon:hover{
+  opacity: 0.8;
+}
+
 .card-info-title{
   display: flex;
   justify-content: center;
@@ -24,12 +42,23 @@ mat-card{
 .card-info-title h1{
   font-size: 60px;
   font-family: "Gabarito";
+  line-height: 60px;
 }
 
 .card-info-title h2{
   font-size: 30px;
   color: rgb(131, 131, 131);
   font-family: "Gabarito";
+}
+
+.app-star-review{
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.card-info-review h1{
+  margin-top: 0.2em;
+  font-weight: 500;
 }
 
 .card-info-review p{
@@ -41,4 +70,44 @@ mat-card{
 img{
   height: 100%;
   width: 500px;
+}
+
+.edit h1{
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  font-family: "Gabarito";
+  margin-left: 30px;
+}
+
+.edit-card-info{
+  margin-left: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+
+.form-field{
+  font-size: 20px;
+}
+
+.save-btn{
+  margin: 1em;
+  font-size: 18px;
+  background-color: rgb(0, 174, 0);
+}
+
+.save-btn:hover{
+  opacity: 0.8;
+}
+
+.cancel-btn{
+  margin: 1em;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.cancel-btn:hover{
+  opacity: 0.8;
 }

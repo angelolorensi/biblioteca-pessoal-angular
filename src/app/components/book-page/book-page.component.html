@@ -1,19 +1,59 @@
+<!-- toolbar -->
 <app-header></app-header>
+
 <body>
   <div>
-    <mat-card mat-elevation="8">
+    <mat-card>
+      <!-- Mostrar imagem se for encontrada pelo google api e mostrar imagem default se não encontrar -->
       <img *ngIf="book?.imageUrl" mat-card-image src="{{book?.imageUrl}}" >
       <img *ngIf="!book?.imageUrl" mat-card-image src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg" >
-      <div class="card-info">
+
+      <!-- Mostrar o card com as informações do livro -->
+      <div *ngIf="!edit" class="card-info">
+        <div class="card-info-btns">
+          <mat-icon title="Editar livro" (click)="editBook()">edit</mat-icon>
+          <mat-icon title="Remover livro" (click)="removeBook(book!.id)">delete</mat-icon>
+        </div>
+
         <div class="card-info-title">
           <h1>{{book?.titulo}}</h1>
           <h2>{{book?.autor}}</h2>
         </div>
-        <app-star-rating [rating]="book!.classificacao"></app-star-rating>
+
+        <app-star-rating [rating]="bookRating"></app-star-rating>
+        
         <div class="card-info-review">
+          <h1>Resenha:</h1>
           <p>{{book?.resenha}}</p>
         </div>
       </div>
+
+      <!-- Mostrar o formulário de edição do livro selecionado -->
+      <div *ngIf="edit" class="edit">
+        <h1>Editar livro</h1>
+        <form class="edit-card-info" [formGroup]="editForm">
+          <mat-form-field class="form-field">
+            <mat-label>Titulo</mat-label>
+            <input matInput type="text" appearance="outline" formControlName="titulo">
+          </mat-form-field>
+
+          <mat-form-field class="form-field">
+            <mat-label>Autor</mat-label>
+            <input matInput type="text" appearance="outline" formControlName="autor">
+          </mat-form-field>
+
+          <mat-form-field class="form-field">
+            <mat-label>Resenha</mat-label>
+            <textarea matInput type="text" appearance="outline" formControlName="resenha"></textarea>
+          </mat-form-field>
+
+          <app-star-rating [rating]="bookRating" (ratingChanged)="onRatingChanged($event)"></app-star-rating>
+
+          <button class="save-btn" type="submit" mat-raised-button (click)="submitUpdatedBook(book!.id)">Concluir</button>
+          <button class="cancel-btn" mat-raised-button (click)="editBook()">Cancelar</button>
+        </form>
+      </div>
+
     </mat-card>
   </div>
 </body>

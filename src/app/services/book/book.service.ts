@@ -23,8 +23,8 @@ export class BookService {
     return this.http.post<Book>(environment.apiAddress + 'livros', book);
   }
 
-  public updateBook(bookId:number): Observable<Book>{
-    return this.http.put<Book>(environment.apiAddress + 'livros/', bookId);
+  public updateBook(bookId:number, book:Book): Observable<Book>{
+    return this.http.put<Book>(environment.apiAddress + 'livros/' + bookId, book);
   }
 
   public delete(bookId: number): Observable<void>{
