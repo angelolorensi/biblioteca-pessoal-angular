@@ -8,6 +8,12 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideLogoComponent } from './components/home/components/side-logo/side-logo.component';
+import { ListedBooksComponent } from './components/home/components/listed-books/listed-books.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { HttpClientModule } from '@angular/common/http';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -15,12 +21,18 @@ import { SideLogoComponent } from './components/home/components/side-logo/side-l
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    SideLogoComponent
+    SideLogoComponent,
+    ListedBooksComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

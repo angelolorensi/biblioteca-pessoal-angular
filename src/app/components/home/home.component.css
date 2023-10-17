@@ -1,3 +1,4 @@
-*{
-  color: white;
+body{
+  margin: 3em;
+  display: flex;
 }
