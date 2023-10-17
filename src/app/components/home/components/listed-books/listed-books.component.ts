@@ -25,6 +25,7 @@ export class ListedBooksComponent implements OnInit {
     this.loadBooksWithoutImage();
   }
 
+  //PARA DESENVOLVIMENTO carrega os livros sem imagem para não exceder numero de chamadas a api
   loadBooksWithoutImage(){
     this.allBooks = this.bookService.getAll();
   }
@@ -44,6 +45,7 @@ export class ListedBooksComponent implements OnInit {
     );
   }
 
+  //Navega para a pagina do livro
   goToBookPage(bookId: number){
     this.router.navigate(['/book', bookId]);
   }

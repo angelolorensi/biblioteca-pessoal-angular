@@ -6,6 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./star-rating.component.css']
 })
 export class StarRatingComponent {
+
   @Input() rating: number = 0;
   @Output() ratingChanged = new EventEmitter<number>();
 

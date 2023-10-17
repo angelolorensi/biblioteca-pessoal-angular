@@ -51,6 +51,7 @@ export class BookPageComponent implements OnInit {
 
   }
 
+  //Carrega a capa do livro
   loadBookCover(title: string, imageUrl:string){
     this.googleBooksService.searchBookImage(title).subscribe(
       image => {
@@ -61,10 +62,12 @@ export class BookPageComponent implements OnInit {
     )
   }
 
+  //Mostra a pagina de edição do livro
   editBook(){
     this.edit = !this.edit;
   }
 
+  //Envia as alterações do livro e retorna para a pagina de demonstração
   submitUpdatedBook(bookId: number){
     this.bookService.updateBook(bookId, this.editForm.value).subscribe(
      data => {
@@ -76,10 +79,12 @@ export class BookPageComponent implements OnInit {
 
   }
 
+  //Muda o valor da classificação no formulario para depois ser salvo
   onRatingChanged(newRating: number):void{
     this.editForm.get('classificacao')?.setValue(newRating);
   }
 
+  //Abre o dialog de exclusão de livro
   removeBook(bookId:number){
     this.dialog.open(ConfirmationDialogComponent, {data: bookId});
   }

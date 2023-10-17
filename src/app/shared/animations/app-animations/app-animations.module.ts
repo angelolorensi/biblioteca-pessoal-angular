@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { SlideInFromLeft } from './slide-in.animations';
 import { SlideInFromRight } from './slide-in.animations';
 
+//esta classe exporta as animações em forma de module
+
 @NgModule({
   imports: [BrowserAnimationsModule, RouterModule, CommonModule],
   exports: [],

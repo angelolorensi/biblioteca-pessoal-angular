@@ -21,8 +21,8 @@ export class ConfirmationDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Quando ativada a função exclui um livro, fecha o dialog e abre um snackbar confirmando a exclusão.
   confirm(){
-    console.log(this.data)
     this.bookService.delete(this.data).subscribe(
       data => {
         this.dialogRef.close();
