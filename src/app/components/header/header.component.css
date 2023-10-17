@@ -1,9 +1,22 @@
 mat-toolbar{
   background-color: #6C63FF;
-
+  display: flex;
+  justify-content: space-between;
+  padding-left: 6em;
+  padding-right: 6em;
 }
 
 mat-toolbar h1{
   color: white;
-  font-size: ;
+  font-size: 30px;
+  font-family: "Gabarito";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+mat-toolbar button{
+  font-size: 20px;
+}
+
+mat-toolbar button:hover{
+  opacity: 0.8;
 }

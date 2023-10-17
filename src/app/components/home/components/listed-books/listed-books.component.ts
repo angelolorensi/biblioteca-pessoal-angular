@@ -18,7 +18,7 @@ export class ListedBooksComponent implements OnInit {
 
   //carrega os livros ao inicializar a pagina
   ngOnInit(): void {
-    this.loadBooks();
+    //this.loadBooks();
   }
 
   //Carrega os livros no array 'allBooks' e adiciona a image dado o titulo e buscando no google books api via service.

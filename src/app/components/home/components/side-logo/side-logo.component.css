@@ -1,6 +1,6 @@
 div{
   margin-left: 5em;
-  margin-top: 4em;
+  margin-top: 3em;
 }
 
 p{
@@ -9,4 +9,5 @@ p{
   margin-bottom: 1em;
   font-size: 9em;
   font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
