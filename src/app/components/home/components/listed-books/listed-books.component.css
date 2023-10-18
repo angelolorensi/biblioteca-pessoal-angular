@@ -56,10 +56,21 @@ img:hover{
   opacity: 0.8;
 }
 
+.description{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
 .loading-spinner{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 50vh;
   margin-top: 20vh;
+}
+
+.paginador{
+  margin: 1em;
 }

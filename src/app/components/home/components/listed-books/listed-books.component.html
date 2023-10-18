@@ -1,23 +1,26 @@
-<ul *ngIf="allBooks | async else loading">
-  <li class="books" *ngFor="let book of allBooks | async">
-    <div (click)="goToBookPage(book.id)">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>{{book.titulo}}</mat-card-title>
-          <mat-card-subtitle>{{book.autor}}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <img *ngIf="book.imageUrl" mat-card-image src="{{book.imageUrl}}" >
-          <img *ngIf="!book.imageUrl" mat-card-image src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg" >
-          <h4>Resenha:</h4>
-          <p>
-            {{book.resenha}}
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </li>
-</ul>
+<div *ngIf="allBooks else loading">
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  <ul class="books">
+    <li *ngFor="let book of allBooks | paginate: {itemsPerPage: 9, currentPage: page}">
+      <div (click)="goToBookPage(book.id)">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{book.titulo}}</mat-card-title>
+            <mat-card-subtitle>{{book.autor}}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <img *ngIf="book.imageUrl" mat-card-image src="{{book.imageUrl}}" >
+            <img *ngIf="!book.imageUrl" mat-card-image src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg" >
+            <h4>Resenha:</h4>
+            <p class="description">{{book.resenha}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </li>
+  </ul>
+  <pagination-controls class="paginador" (pageChange)="page = $event"></pagination-controls>
+</div>
+
 
 <ng-template #loading>
   <div class="loading-spinner">

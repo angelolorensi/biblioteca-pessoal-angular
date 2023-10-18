@@ -20,7 +20,6 @@ export class GoogleBooksService {
     if (this.cache.has(title)) {
       return this.cache.get(title)!;
     }
-    console.log(this.cache);
     //Url da api
     const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${title}&key=${this.apiKey}`;
 
