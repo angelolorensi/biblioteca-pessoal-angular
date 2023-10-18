@@ -21,7 +21,7 @@
         </div>
 
         <app-star-rating [rating]="bookRating"></app-star-rating>
-        
+
         <div class="card-info-review">
           <h1>Resenha:</h1>
           <p>{{book?.resenha}}</p>
@@ -44,7 +44,7 @@
 
           <mat-form-field class="form-field">
             <mat-label>Resenha</mat-label>
-            <textarea matInput type="text" appearance="outline" formControlName="resenha"></textarea>
+            <textarea appAutoResize matInput type="text" appearance="outline" formControlName="resenha"></textarea>
           </mat-form-field>
 
           <app-star-rating [rating]="bookRating" (ratingChanged)="onRatingChanged($event)"></app-star-rating>

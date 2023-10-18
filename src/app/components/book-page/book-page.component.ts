@@ -28,13 +28,20 @@ export class BookPageComponent implements OnInit {
     private snackbar: MatSnackBar,
     private dialog: MatDialog) {
 
+   }
+
+  ngOnInit(): void {
+    this.getBook();
+  }
+
+  getBook(){
     this.route.params.subscribe(params => {
       const bookId = +params['id'];
       this.bookService.getById(bookId).subscribe(
         data => {
           this.book = data;
           this.bookRating = data.classificacao;
-          //this.loadBookCover(data.titulo, data.imageUrl);
+          this.loadBookCover(data.titulo, data.imageUrl);
 
           this.editForm = this.fb.group({
             titulo: [this.book?.titulo],
@@ -45,10 +52,6 @@ export class BookPageComponent implements OnInit {
         }
       )
     });
-   }
-
-  ngOnInit(): void {
-
   }
 
   //Carrega a capa do livro
@@ -56,7 +59,7 @@ export class BookPageComponent implements OnInit {
     this.googleBooksService.searchBookImage(title).subscribe(
       image => {
         if(image){
-          imageUrl = image;
+          this.book!.imageUrl = image;
         }
       }
     )
@@ -71,9 +74,9 @@ export class BookPageComponent implements OnInit {
   submitUpdatedBook(bookId: number){
     this.bookService.updateBook(bookId, this.editForm.value).subscribe(
      data => {
-       this.snackbar.open('Livro editado com sucesso!', 'close', {duration: 2000})
+       this.snackbar.open('Livro editado com sucesso!', 'X', {duration: 5000})
        this.edit = !this.edit;
-       location.reload();
+       this.getBook();
      }
     );
 

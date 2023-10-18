@@ -23,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confirmation-dialog.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
+import { AutoResizeDirective } from './shared/auto-resize/auto-resize.directive';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confir
     BookPageComponent,
     StarRatingComponent,
     ConfirmationDialogComponent,
+    AddBookComponent,
+    AutoResizeDirective,
   ],
   imports: [
     BrowserModule,

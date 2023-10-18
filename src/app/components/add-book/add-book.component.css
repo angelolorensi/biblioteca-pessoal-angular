@@ -1,0 +1,51 @@
+.title{
+  display: flex;
+  justify-content: center;
+}
+
+.title p {
+  font-size: 40px;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  width: 600px;
+}
+
+.container{
+  display: flex;
+  padding: 2em;
+}
+
+.container form{
+  display: flex;
+  flex-direction: column;
+}
+
+.container form div{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container form div button{
+  margin-top: 1em;
+  width: 200px;
+  font-size: 20px;
+}
+
+.container form div button:hover{
+  opacity: 0.8;
+}
+
+.save-btn{
+  background-color: green;
+  color: white;
+}
+
+.form-field{
+  width: 400px;
+}
