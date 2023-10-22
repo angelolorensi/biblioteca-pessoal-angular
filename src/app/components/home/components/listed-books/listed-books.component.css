@@ -39,7 +39,6 @@ mat-card-content{
 mat-card-content h4{
   font-size: 20px;
   font-weight: 500;
-
 }
 
 mat-card-image{
@@ -73,4 +72,91 @@ img:hover{
 
 .paginador{
   margin: 1em;
+}
+
+
+@media (max-width: 1350px) {
+
+  mat-card{
+    width: 160px;
+  }
+
+  img{
+    width: 200px;
+    height: 200px
+  };
+
+}
+
+@media (max-width: 500px) {
+  ul{
+    gap:10px;
+    align-items: center;
+  }
+
+  mat-card{
+    width: 120px;
+  }
+
+  mat-card mat-card-header{
+    margin: 0;
+    padding: 0;
+  }
+
+  mat-card mat-card-title{
+    font-size: 20px;
+  }
+
+  mat-card mat-card-subtitle{
+    font-size: 13px;
+  }
+
+  mat-card-content h4{
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  mat-card-content p{
+    font-size: 15px;
+  }
+
+  img{
+    width: 150px;
+    height: 160px
+  };
+
+  .loading-spinner{
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 376px){
+
+  mat-card mat-card-title{
+    font-size: 13px;
+  }
+
+  mat-card mat-card-subtitle{
+    font-size: 8px;
+  }
+
+
+  mat-card-content h4{
+    font-size: 14px;
+  }
+
+  mat-card-content p{
+    font-size: 12px;
+  }
+
+  mat-card{
+    width: 90px;
+  }
+
+  img{
+    width: 120px;
+    height: 130px
+  };
+
 }

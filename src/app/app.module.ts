@@ -26,7 +26,6 @@ import { AutoResizeDirective } from './shared/auto-resize/auto-resize.directive'
 import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confirmation-dialog.component';
 import { StarRatingComponent } from './shared/star-rating/star-rating.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +56,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FormsModule,
     MatDialogModule,
     MatSnackBarModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

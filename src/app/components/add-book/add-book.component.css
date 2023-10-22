@@ -49,3 +49,66 @@ body{
 .form-field{
   width: 400px;
 }
+
+@media (max-width: 1100px) {
+
+  body{
+    width: 500px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  body{
+    width: 350px;
+  }
+
+  .title p {
+    font-size: 30px;
+  }
+
+  .form-field{
+    width: 300px;
+  }
+
+  .container{
+    padding: 0;
+  }
+
+  .container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container form div button{
+    margin-top: 1em;
+    width: 120px;
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  body{
+    width: 220px;
+    height: 300px;
+  }
+
+  .title p {
+    font-size: 20px;
+  }
+
+  .form-field{
+    width: 200px;
+  }
+
+
+  .container form div button{
+    margin-top: 1em;
+    width: 90px;
+    font-size: 15px;
+  }
+
+}

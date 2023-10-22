@@ -1,4 +1,4 @@
-div{
+.logo-text{
   margin-left: 5em;
   margin-top: 3em;
 }
@@ -11,4 +11,55 @@ p{
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   cursor: default;
+}
+
+@media (max-width: 1750px) {
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p{
+    font-size: 6em;
+  }
+
+  img{
+    width: 400px;
+  }
+}
+
+@media (max-width: 1350px) {
+  p{
+    font-size: 4em;
+  }
+
+  img{
+    width: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  p{
+    font-size: 2em;
+  }
+
+  img{
+    width: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .logo-text{
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  p{
+    font-size: 2em;
+  }
+
+  img{
+    width: 150px;
+  }
 }
